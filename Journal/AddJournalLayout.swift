@@ -13,12 +13,31 @@ extension AddJournalViewController {
     
     func addLayout(titleTextView: UITextView, contentsTextView: UITextView, saveButton: UIButton, closeButton: UIButton) {
         
-        if titleTextView.text == "" {
+        if addNew == true {
             
-            titleTextView.text = "Title"
+            titleTextView.placeholder = " Enter Your Title"
+            
+            contentsTextView.placeholder = " What you want to say"
+            
+            saveButton.setTitle("Save", for: .normal)
+            
+            pickImageView.backgroundColor = UIColor.clear
+            
+            let gradient = CAGradientLayer()
+            gradient.frame = defaultBackgroundView.bounds
+            gradient.colors = [UIColor.slate.cgColor, UIColor(red: 26.0/255.0, green: 34.0/255.0, blue: 38.0/255.0, alpha: 1.0).cgColor]
+            gradient.startPoint = CGPoint(x: 0.5, y: 0)
+            gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
+            
+            defaultImageView.tintColor = UIColor.white
+            
+            defaultBackgroundView.layer.addSublayer(gradient)
+            
+            
+            
         } else {
             
-            
+            saveButton.setTitle("change", for: .normal)
         }
         titleTextView.textColor = UIColor.slate
         
@@ -28,14 +47,8 @@ extension AddJournalViewController {
 
         
         saveButton.backgroundColor = UIColor.dustyOrange
-        if addNew == true {
-        saveButton.setTitle("Save", for: .normal)
-        } else {
-            saveButton.setTitle("change", for: .normal)
-        }
         saveButton.setTitleColor(UIColor.white, for: .normal)
         saveButton.layer.cornerRadius = 22
-        
         saveButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         saveButton.layer.shadowRadius = 10
         saveButton.layer.shadowColor = UIColor(red: 247.0/255.0, green: 174.0/255.0, blue: 163.0/255.0, alpha: 1.0).cgColor

@@ -16,7 +16,10 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
     
     @IBOutlet weak var defaultBackgroundView: UIView!
 
+
+    
     @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var defaultImageView: UIImageView!
     
     @IBOutlet weak var contentsTextView: UITextView!
     
@@ -48,23 +51,19 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
        
         
         if addNew == true {
-            
 
-            
-            addLayout(titleTextView: titleTextView, contentsTextView: contentsTextView, saveButton: saveButton, closeButton: closeButton)
             
         } else {
             loadData()
             titleTextView.text = journals[editCellIndexPath].title
             contentsTextView.text = journals[editCellIndexPath].content
             pickImageView.image = UIImage(data: journals[editCellIndexPath].image! as Data)
-            
-            addLayout(titleTextView: titleTextView, contentsTextView: contentsTextView, saveButton: saveButton, closeButton: closeButton)
+
             
             
         }
         
-        
+          addLayout(titleTextView: titleTextView, contentsTextView: contentsTextView, saveButton: saveButton, closeButton: closeButton)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

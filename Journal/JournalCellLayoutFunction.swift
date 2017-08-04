@@ -16,11 +16,17 @@ extension JournalListViewController {
         
         journalCell.journalImageView.image = UIImage(data: journals[indexPath.row].image! as Data)
         journalCell.journalImageView.clipsToBounds = true
-        journalCell.journalImageView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        journalCell.journalImageView.layer.shadowPath = UIBezierPath(rect: journalCell.journalImageView.bounds).cgPath
-        journalCell.journalImageView.layer.shadowRadius = 10
-        journalCell.journalImageView.layer.shadowColor = UIColor.coolGrey.cgColor
-        journalCell.journalImageView.layer.cornerRadius = 8
+
+
+        
+        
+        journalCell.journalContainerView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        journalCell.journalContainerView.layer.shadowPath = UIBezierPath(rect: journalCell.journalImageView.bounds).cgPath
+        journalCell.journalContainerView.layer.shadowOpacity = 1
+        journalCell.journalContainerView.layer.shadowRadius = 10
+        journalCell.journalContainerView.layer.shadowColor = UIColor.coolGrey.cgColor
+        journalCell.journalContainerView.layer.cornerRadius = 8
+        journalCell.journalContainerView.clipsToBounds = true
        
         
         journalCell.journalTitleLabel.text = journals[indexPath.row].title

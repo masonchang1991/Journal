@@ -16,6 +16,7 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var journalListTableView: UITableView!
     
+    @IBOutlet weak var barRightButton: UIBarButtonItem!
     
     
     
@@ -36,7 +37,7 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         self.navigationItem.titleView = title
         self.navigationController?.navigationBar.backgroundColor = UIColor.white
         
-        
+        barRightButton.tintColor = UIColor.dustyOrange
         
         
        
