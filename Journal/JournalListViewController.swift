@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class JournalListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var journalListTableView: UITableView!
     
@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
        
         self.journalListTableView.delegate = self
         self.journalListTableView.dataSource = self
@@ -46,16 +48,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return JournalListTableViewCell()
         }
         
-         cell.journalImageView.image = UIImage(named: "iconPlus")
-         cell.journalTitleTextView.text = "AHAHAAHA"
+       
         
         
-        return cell
+        
+        
+        
+        return journalCellLayout(cell, rowAt: indexPath)
         
         
         
     }
     
+    
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(rowHeight)
