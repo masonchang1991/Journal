@@ -10,7 +10,7 @@ import UIKit
 
 extension AddJournalViewController {
     
-
+    
     @IBAction func saveToLocal(_ sender: UIButton) {
         
         let alertController = UIAlertController(
@@ -115,5 +115,5 @@ extension AddJournalViewController {
         
     }
     
-
+    
 }

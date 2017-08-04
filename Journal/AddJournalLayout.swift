@@ -36,6 +36,7 @@ extension AddJournalViewController {
             
             saveButton.setTitle("change", for: .normal)
         }
+        
         titleTextView.textColor = UIColor.slate
         
         contentsTextView.textColor = UIColor(red: 131.0/255.0, green: 156.0/255.0, blue: 152.0/255.0, alpha: 1.0)

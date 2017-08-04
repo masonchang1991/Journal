@@ -27,7 +27,7 @@ extension AddJournalViewController: UIImagePickerControllerDelegate {
                 title: "很抱歉",
                 message: "您的相機是空號請裝了再按",
                 preferredStyle: .alert)
-
+            
             // 建立[ok]按鈕
             let okAction = UIAlertAction(
                 title: "ok",

@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class AddJournalViewController: UIViewController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-
+    
     @IBOutlet weak var pickImageView: UIImageView!
     
     @IBOutlet weak var defaultBackgroundView: UIView!
@@ -56,7 +56,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
             
         }
         
-          addLayout(titleTextView: titleTextView, contentsTextView: contentsTextView, saveButton: saveButton, closeButton: closeButton)
+        addLayout(titleTextView: titleTextView, contentsTextView: contentsTextView, saveButton: saveButton, closeButton: closeButton)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -105,7 +105,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
             completion: nil)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -113,12 +113,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
     
     func loadData() {
         
-        let journalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
-        do {
-            journals = try addJournalManager.fetch(journalRequest)
-        } catch {
-            print("Could not load data from database \(error.localizedDescription)")
-        }
+        journals = load(nsObjectArray: journals, nsObjectContext: addJournalManager)
         
     }
     

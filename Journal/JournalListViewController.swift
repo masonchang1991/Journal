@@ -47,7 +47,9 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         //swiftlint:disable force_cast
         addJournalManager = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         //swiftlint:enable force_cast
-        loadData()
+        
+        journals = load(nsObjectArray: journals, nsObjectContext: addJournalManager)
+        
         self.journalListTableView.reloadData()
         
     }
@@ -68,8 +70,11 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         cell.selectionStyle = .none
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(goToEdit))
+        
         editCellIndexPath = indexPath.row
+        
         cell.journalImageView.addGestureRecognizer(tap)
+        
         cell.journalImageView.isUserInteractionEnabled = true
         
         return journalCellLayout(cell, rowAt: indexPath)
@@ -87,8 +92,6 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         
         let indexPath = self.journalListTableView.indexPathForRow(at: taplocation)
         
-        print(indexPath)
-        
         guard let indexPathRow = indexPath?.row else {
             return
         }
@@ -96,17 +99,6 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         editCellIndexPath = indexPathRow
         
         self.performSegue(withIdentifier: "AddOrEditJournal", sender: self)
-        
-    }
-    
-    func loadData() {
-        
-        let journalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
-        do {
-            journals = try addJournalManager.fetch(journalRequest)
-        } catch {
-            print("Could not load data from database \(error.localizedDescription)")
-        }
         
     }
     

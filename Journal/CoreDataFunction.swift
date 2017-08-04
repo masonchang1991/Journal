@@ -8,3 +8,21 @@
 import CoreData
 
 
+
+func load(nsObjectArray: [Journal] , nsObjectContext: NSManagedObjectContext ) -> [Journal] {
+    
+    var journals = nsObjectArray
+    
+    let request: NSFetchRequest<Journal> = Journal.fetchRequest()
+    do {
+        journals = try nsObjectContext.fetch(request)
+    } catch {
+        print("Could not load data from database \(error.localizedDescription)")
+    }
+    return journals
+    
+}
+
+
+
+
