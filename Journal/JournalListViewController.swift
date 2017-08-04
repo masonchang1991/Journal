@@ -33,7 +33,8 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         title.font = UIFont.boldSystemFont(ofSize: 20)
         
         self.navigationItem.titleView = title
-        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.setBottomBorderColor(color: UIColor.white, height: 1)
         
         barRightButton.tintColor = UIColor.dustyOrange
        
