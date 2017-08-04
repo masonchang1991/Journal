@@ -7,9 +7,7 @@
 
 import CoreData
 
-
-
-func load(nsObjectArray: [Journal] , nsObjectContext: NSManagedObjectContext ) -> [Journal] {
+func load(nsObjectArray: [Journal], nsObjectContext: NSManagedObjectContext ) -> [Journal] {
     
     var journals = nsObjectArray
     
@@ -22,7 +20,3 @@ func load(nsObjectArray: [Journal] , nsObjectContext: NSManagedObjectContext ) -
     return journals
     
 }
-
-
-
-

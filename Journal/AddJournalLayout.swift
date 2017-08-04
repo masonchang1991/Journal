@@ -29,12 +29,13 @@ extension AddJournalViewController {
             gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
             
             defaultImageView.tintColor = UIColor.white
+            defaultImageView.backgroundColor = UIColor.clear
             
             defaultBackgroundView.layer.addSublayer(gradient)
             
         } else {
             
-            saveButton.setTitle("change", for: .normal)
+            saveButton.setTitle("Save", for: .normal)
         }
         
         titleTextView.textColor = UIColor.slate
@@ -53,6 +54,8 @@ extension AddJournalViewController {
         closeButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         closeButton.layer.shadowRadius = 4
         closeButton.layer.shadowColor = UIColor(red: 62.0/255.0, green: 62.0/255.0, blue: 62.0/255.0, alpha: 0.5).cgColor
+        closeButton.layer.shadowOpacity = 1.0
+        closeButton.alpha = 1.0
         
     }
     
