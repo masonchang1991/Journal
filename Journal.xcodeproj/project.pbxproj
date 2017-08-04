@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		93729A8B1F34027C004125C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A8A1F34027C004125C0 /* AppDelegate.swift */; };
-		93729A8D1F34027C004125C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A8C1F34027C004125C0 /* ViewController.swift */; };
+		93729A8D1F34027C004125C0 /* JournalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A8C1F34027C004125C0 /* JournalListViewController.swift */; };
 		93729A901F34027C004125C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93729A8E1F34027C004125C0 /* Main.storyboard */; };
 		93729A921F34027C004125C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93729A911F34027C004125C0 /* Assets.xcassets */; };
 		93729A951F34027C004125C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93729A931F34027C004125C0 /* LaunchScreen.storyboard */; };
+		93729A9E1F34086F004125C0 /* JournalListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A9D1F34086F004125C0 /* JournalListTableViewCell.swift */; };
+		93729AA01F340C0F004125C0 /* JournalCellLayoutFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A9F1F340C0F004125C0 /* JournalCellLayoutFunction.swift */; };
+		93729AA41F3411AD004125C0 /* extensionUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AA31F3411AD004125C0 /* extensionUIColors.swift */; };
+		93729AA61F341703004125C0 /* AddJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AA51F341703004125C0 /* AddJournalViewController.swift */; };
+		93729AA91F3417C1004125C0 /* extensionUIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AA81F3417C1004125C0 /* extensionUIFonts.swift */; };
+		93729AAC1F341C03004125C0 /* GetPhotoFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AAB1F341C03004125C0 /* GetPhotoFunction.swift */; };
+		93729AAE1F341E4A004125C0 /* AddJournalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */; };
+		93729AB81F34309D004125C0 /* JournalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */; };
+		93729ABA1F3432AB004125C0 /* CoreDataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AB91F3432AB004125C0 /* CoreDataFunction.swift */; };
+		93729ABE1F346B5B004125C0 /* ButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729ABD1F346B5B004125C0 /* ButtonFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93729A871F34027C004125C0 /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93729A8A1F34027C004125C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93729A8C1F34027C004125C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93729A8C1F34027C004125C0 /* JournalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListViewController.swift; sourceTree = "<group>"; };
 		93729A8F1F34027C004125C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93729A911F34027C004125C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93729A941F34027C004125C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93729A961F34027C004125C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93729A9D1F34086F004125C0 /* JournalListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalListTableViewCell.swift; sourceTree = "<group>"; };
+		93729A9F1F340C0F004125C0 /* JournalCellLayoutFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCellLayoutFunction.swift; sourceTree = "<group>"; };
+		93729AA31F3411AD004125C0 /* extensionUIColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionUIColors.swift; sourceTree = "<group>"; };
+		93729AA51F341703004125C0 /* AddJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalViewController.swift; sourceTree = "<group>"; };
+		93729AA81F3417C1004125C0 /* extensionUIFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionUIFonts.swift; sourceTree = "<group>"; };
+		93729AAB1F341C03004125C0 /* GetPhotoFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPhotoFunction.swift; path = ../GetPhotoFunction.swift; sourceTree = "<group>"; };
+		93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalLayout.swift; sourceTree = "<group>"; };
+		93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalModel.xcdatamodel; sourceTree = "<group>"; };
+		93729AB91F3432AB004125C0 /* CoreDataFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFunction.swift; sourceTree = "<group>"; };
+		93729ABD1F346B5B004125C0 /* ButtonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +75,55 @@
 			isa = PBXGroup;
 			children = (
 				93729A8A1F34027C004125C0 /* AppDelegate.swift */,
-				93729A8C1F34027C004125C0 /* ViewController.swift */,
 				93729A8E1F34027C004125C0 /* Main.storyboard */,
+				93729AB91F3432AB004125C0 /* CoreDataFunction.swift */,
+				93729AAA1F341BE7004125C0 /* AddJournalView */,
+				93729AA11F3410FF004125C0 /* JournalListView */,
 				93729A911F34027C004125C0 /* Assets.xcassets */,
+				93729AA71F3417A9004125C0 /* Fonts */,
+				93729AA21F34118E004125C0 /* Colors */,
 				93729A931F34027C004125C0 /* LaunchScreen.storyboard */,
 				93729A961F34027C004125C0 /* Info.plist */,
 			);
 			path = Journal;
+			sourceTree = "<group>";
+		};
+		93729AA11F3410FF004125C0 /* JournalListView */ = {
+			isa = PBXGroup;
+			children = (
+				93729A8C1F34027C004125C0 /* JournalListViewController.swift */,
+				93729A9F1F340C0F004125C0 /* JournalCellLayoutFunction.swift */,
+				93729A9D1F34086F004125C0 /* JournalListTableViewCell.swift */,
+			);
+			name = JournalListView;
+			sourceTree = "<group>";
+		};
+		93729AA21F34118E004125C0 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				93729AA31F3411AD004125C0 /* extensionUIColors.swift */,
+				93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
+		93729AA71F3417A9004125C0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				93729AA81F3417C1004125C0 /* extensionUIFonts.swift */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		93729AAA1F341BE7004125C0 /* AddJournalView */ = {
+			isa = PBXGroup;
+			children = (
+				93729AA51F341703004125C0 /* AddJournalViewController.swift */,
+				93729ABD1F346B5B004125C0 /* ButtonFunction.swift */,
+				93729AAB1F341C03004125C0 /* GetPhotoFunction.swift */,
+				93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */,
+			);
+			name = AddJournalView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +217,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93729A8D1F34027C004125C0 /* ViewController.swift in Sources */,
+				93729AA41F3411AD004125C0 /* extensionUIColors.swift in Sources */,
+				93729AAC1F341C03004125C0 /* GetPhotoFunction.swift in Sources */,
+				93729AA91F3417C1004125C0 /* extensionUIFonts.swift in Sources */,
+				93729A8D1F34027C004125C0 /* JournalListViewController.swift in Sources */,
+				93729ABA1F3432AB004125C0 /* CoreDataFunction.swift in Sources */,
+				93729AA61F341703004125C0 /* AddJournalViewController.swift in Sources */,
+				93729ABE1F346B5B004125C0 /* ButtonFunction.swift in Sources */,
+				93729AB81F34309D004125C0 /* JournalModel.xcdatamodeld in Sources */,
+				93729AA01F340C0F004125C0 /* JournalCellLayoutFunction.swift in Sources */,
+				93729AAE1F341E4A004125C0 /* AddJournalLayout.swift in Sources */,
+				93729A9E1F34086F004125C0 /* JournalListTableViewCell.swift in Sources */,
 				93729A8B1F34027C004125C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,8 +392,22 @@
 				93729A9B1F34027C004125C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */,
+			);
+			currentVersion = 93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */;
+			path = JournalModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 93729A7F1F34027C004125C0 /* Project object */;
 }
