@@ -29,6 +29,15 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: 283, height: 24))
+        title.text = "My Journals"
+        title.textColor = UIColor.slate
+        
+        self.navigationItem.titleView = title
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        
+        
+        
         
        
         self.journalListTableView.delegate = self

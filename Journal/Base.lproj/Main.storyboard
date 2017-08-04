@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,17 +50,39 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faD-qs-G0T">
+                                                    <rect key="frame" x="30" y="193" width="315" height="0.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="bHH-tq-Rww"/>
+                                                        <constraint firstAttribute="width" constant="315" id="hIu-ga-r5K"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-MG-DOc">
+                                                    <rect key="frame" x="183" y="189" width="8" height="8"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="8" id="5N0-u9-Sqd"/>
+                                                        <constraint firstAttribute="height" constant="8" id="sth-oz-Q4c"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ilq-gy-X54" firstAttribute="top" secondItem="Vx4-WP-Uey" secondAttribute="top" constant="10" id="42I-Mx-z8w"/>
                                                 <constraint firstItem="hrG-WQ-qjn" firstAttribute="top" secondItem="ilq-gy-X54" secondAttribute="bottom" constant="16" id="4Dq-pe-2ve"/>
+                                                <constraint firstItem="faD-qs-G0T" firstAttribute="centerX" secondItem="Vx4-WP-Uey" secondAttribute="centerX" id="P9m-Ff-ICP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="faD-qs-G0T" secondAttribute="bottom" constant="9.8000000000000007" id="bu4-u9-y1y"/>
                                                 <constraint firstItem="ilq-gy-X54" firstAttribute="centerX" secondItem="Vx4-WP-Uey" secondAttribute="centerX" id="hXa-xN-tTZ"/>
+                                                <constraint firstItem="HQY-MG-DOc" firstAttribute="centerX" secondItem="faD-qs-G0T" secondAttribute="centerX" id="ilk-oI-d1x"/>
                                                 <constraint firstItem="hrG-WQ-qjn" firstAttribute="centerX" secondItem="Vx4-WP-Uey" secondAttribute="centerX" id="k7Y-Ii-yM8"/>
+                                                <constraint firstItem="HQY-MG-DOc" firstAttribute="centerY" secondItem="faD-qs-G0T" secondAttribute="centerY" id="nAR-8m-6Sh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="journalImageView" destination="ilq-gy-X54" id="Vgc-HX-NnE"/>
                                             <outlet property="journalTitleLabel" destination="hrG-WQ-qjn" id="Iz7-sN-oUK"/>
+                                            <outlet property="sperator" destination="faD-qs-G0T" id="PYj-gD-hil"/>
+                                            <outlet property="speratorMiddleBall" destination="HQY-MG-DOc" id="dnW-zC-3Zh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,9 +125,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9W-4k-JYf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crV-jC-4jn">
                                 <rect key="frame" x="20" y="29" width="36" height="36"/>
                                 <constraints>
@@ -146,20 +166,28 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Zx-Vaj">
-                                <rect key="frame" x="22" y="385" width="331" height="36"/>
+                                <rect key="frame" x="22" y="381" width="331" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="331" id="3Yu-cr-MId"/>
-                                    <constraint firstAttribute="height" constant="36" id="DqQ-5U-UB3"/>
+                                    <constraint firstAttribute="height" constant="40" id="DqQ-5U-UB3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKe-N4-VhX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9W-4k-JYf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="371"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kso-Zx-Vaj" firstAttribute="centerX" secondItem="jTa-V2-jIR" secondAttribute="centerX" id="0Pb-fw-D8h"/>
                             <constraint firstItem="kso-Zx-Vaj" firstAttribute="top" secondItem="F9W-4k-JYf" secondAttribute="bottom" constant="10" id="BzM-16-RSl"/>
+                            <constraint firstItem="sKe-N4-VhX" firstAttribute="width" secondItem="F9W-4k-JYf" secondAttribute="width" id="JBb-QV-OWc"/>
                             <constraint firstItem="kGL-LT-xef" firstAttribute="top" secondItem="Tue-Yo-BqE" secondAttribute="bottom" constant="9.5" id="KFP-nz-0r9"/>
                             <constraint firstItem="kGL-LT-xef" firstAttribute="centerX" secondItem="jTa-V2-jIR" secondAttribute="centerX" id="NUI-NS-ken"/>
                             <constraint firstItem="Tue-Yo-BqE" firstAttribute="top" secondItem="kso-Zx-Vaj" secondAttribute="bottom" constant="10" id="RmL-k7-pLF"/>
@@ -169,7 +197,10 @@
                             <constraint firstAttribute="trailing" secondItem="F9W-4k-JYf" secondAttribute="trailing" id="eEZ-lg-IgG"/>
                             <constraint firstItem="crV-jC-4jn" firstAttribute="top" secondItem="XRk-6l-QlS" secondAttribute="bottom" constant="9" id="elV-eO-zAY"/>
                             <constraint firstItem="XRk-6l-QlS" firstAttribute="bottom" secondItem="F9W-4k-JYf" secondAttribute="top" constant="20" id="fsq-yT-lOD"/>
+                            <constraint firstItem="sKe-N4-VhX" firstAttribute="top" secondItem="XRk-6l-QlS" secondAttribute="bottom" constant="-20" id="g7Z-Vi-scr"/>
+                            <constraint firstItem="sKe-N4-VhX" firstAttribute="height" secondItem="F9W-4k-JYf" secondAttribute="height" id="hfw-80-f9C"/>
                             <constraint firstItem="Tue-Yo-BqE" firstAttribute="centerX" secondItem="jTa-V2-jIR" secondAttribute="centerX" id="mTc-TE-Sd0"/>
+                            <constraint firstItem="sKe-N4-VhX" firstAttribute="leading" secondItem="jTa-V2-jIR" secondAttribute="leading" id="rHr-qj-bmx"/>
                             <constraint firstAttribute="bottom" secondItem="5gN-4R-BYT" secondAttribute="bottom" constant="8" id="xgh-7m-FHY"/>
                             <constraint firstItem="crV-jC-4jn" firstAttribute="leading" secondItem="jTa-V2-jIR" secondAttribute="leading" constant="20" id="xzQ-Hu-klW"/>
                         </constraints>
@@ -177,6 +208,7 @@
                     <connections>
                         <outlet property="closeButton" destination="crV-jC-4jn" id="KJ6-hE-XDu"/>
                         <outlet property="contentsTextView" destination="kGL-LT-xef" id="fvF-fN-usP"/>
+                        <outlet property="defaultBackgroundView" destination="sKe-N4-VhX" id="ukz-1c-ziH"/>
                         <outlet property="pickImageView" destination="F9W-4k-JYf" id="Vld-4l-Htv"/>
                         <outlet property="saveButton" destination="5gN-4R-BYT" id="49Z-dM-qrn"/>
                         <outlet property="titleTextView" destination="kso-Zx-Vaj" id="94A-cN-prM"/>

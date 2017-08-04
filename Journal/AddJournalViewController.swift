@@ -14,6 +14,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
 
     @IBOutlet weak var pickImageView: UIImageView!
     
+    @IBOutlet weak var defaultBackgroundView: UIView!
 
     @IBOutlet weak var titleTextView: UITextView!
     
@@ -48,9 +49,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
         
         if addNew == true {
             
-            titleTextView.text = ""
-            contentsTextView.text = ""
-            pickImageView.image = UIImage()
+
             
             addLayout(titleTextView: titleTextView, contentsTextView: contentsTextView, saveButton: saveButton, closeButton: closeButton)
             

@@ -15,4 +15,9 @@ class JournalListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var journalTitleLabel: UILabel!
 
+    
+    @IBOutlet weak var sperator: UIView!
+    
+    @IBOutlet weak var speratorMiddleBall: UIView!
+    
 }

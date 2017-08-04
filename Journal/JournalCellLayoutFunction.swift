@@ -25,6 +25,12 @@ extension JournalListViewController {
         
         journalCell.journalTitleLabel.text = journals[indexPath.row].title
         journalCell.journalTitleLabel.textColor = UIColor.slate
+        
+        
+        journalCell.sperator.backgroundColor = UIColor.coolGrey
+        journalCell.speratorMiddleBall.layer.borderColor = UIColor.coolGrey.cgColor
+        journalCell.speratorMiddleBall.layer.borderWidth = 0.5
+        journalCell.speratorMiddleBall.layer.cornerRadius = journalCell.speratorMiddleBall.bounds.width/2
 
         
         
