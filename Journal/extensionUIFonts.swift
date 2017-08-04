@@ -143,7 +143,7 @@ extension UITextView: UITextViewDelegate {
         
         set {
             // Store the placeholder text in the label
-            var placeHolderLabel = self.viewWithTag(200) as? UILabel
+            let placeHolderLabel = self.viewWithTag(200) as? UILabel
             if placeHolderLabel == nil {
                 // Add placeholder label to text view
                 self.addPlaceholderLabel(placeholderText: newValue!)
@@ -158,7 +158,7 @@ extension UITextView: UITextViewDelegate {
     // in the text viewotherwise, show the label
     public func textViewDidChange(textView: UITextView) {
         
-        var placeHolderLabel = self.viewWithTag(200)
+        let placeHolderLabel = self.viewWithTag(200)
         
         if !self.hasText {
             // Get the placeholder label
@@ -172,7 +172,7 @@ extension UITextView: UITextViewDelegate {
     func addPlaceholderLabel(placeholderText: String) {
         
         // Create the label and set its properties
-        var placeholderLabel = UILabel()
+        let placeholderLabel = UILabel()
         placeholderLabel.text = placeholderText
         placeholderLabel.sizeToFit()
         placeholderLabel.frame.origin.x = 5.0

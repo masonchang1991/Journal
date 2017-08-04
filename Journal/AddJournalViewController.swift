@@ -81,8 +81,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
         // 建立[相簿]按鈕
         let photoAction = UIAlertAction(
             title: "相簿",
-            style: .default) {
-                (_: UIAlertAction!) -> Void in
+            style: .default) { (_: UIAlertAction!) -> Void in
                 
                 self.getUserPhoto()
         }
@@ -92,8 +91,7 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
         // 建立[相機]按鈕
         let cameraAction = UIAlertAction(
             title: "相機",
-            style: .default) {
-                (_: UIAlertAction!) -> Void in
+            style: .default) { (_: UIAlertAction!) -> Void in
                 
                 self.getUserCamera()
                 

@@ -34,7 +34,7 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.navigationItem.titleView = title
         self.navigationController?.navigationBar.backgroundColor = UIColor.white
-        
+        self.navigationController?.navigationBar.setBottomBorderColor(color: UIColor.white, height: 1)
         barRightButton.tintColor = UIColor.dustyOrange
        
         self.journalListTableView.delegate = self
