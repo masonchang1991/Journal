@@ -12,6 +12,8 @@
 		93729A901F34027C004125C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93729A8E1F34027C004125C0 /* Main.storyboard */; };
 		93729A921F34027C004125C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93729A911F34027C004125C0 /* Assets.xcassets */; };
 		93729A951F34027C004125C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93729A931F34027C004125C0 /* LaunchScreen.storyboard */; };
+		93729A9E1F34086F004125C0 /* JournalListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A9D1F34086F004125C0 /* JournalListTableViewCell.swift */; };
+		93729AA01F340C0F004125C0 /* JournalCellLayoutFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729A9F1F340C0F004125C0 /* JournalCellLayoutFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		93729A911F34027C004125C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93729A941F34027C004125C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93729A961F34027C004125C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93729A9D1F34086F004125C0 /* JournalListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalListTableViewCell.swift; sourceTree = "<group>"; };
+		93729A9F1F340C0F004125C0 /* JournalCellLayoutFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCellLayoutFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				93729A8A1F34027C004125C0 /* AppDelegate.swift */,
 				93729A8C1F34027C004125C0 /* ViewController.swift */,
+				93729A9F1F340C0F004125C0 /* JournalCellLayoutFunction.swift */,
 				93729A8E1F34027C004125C0 /* Main.storyboard */,
+				93729A9D1F34086F004125C0 /* JournalListTableViewCell.swift */,
 				93729A911F34027C004125C0 /* Assets.xcassets */,
 				93729A931F34027C004125C0 /* LaunchScreen.storyboard */,
 				93729A961F34027C004125C0 /* Info.plist */,
@@ -156,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93729A8D1F34027C004125C0 /* ViewController.swift in Sources */,
+				93729AA01F340C0F004125C0 /* JournalCellLayoutFunction.swift in Sources */,
+				93729A9E1F34086F004125C0 /* JournalListTableViewCell.swift in Sources */,
 				93729A8B1F34027C004125C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,16 +8,82 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var journalListTableView: UITableView!
+    
+    
+    
+    
+    var rowHeight = 212
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        self.journalListTableView.delegate = self
+        self.journalListTableView.dataSource = self
+        
+        
+        
+        
+        
+        
+        
+        
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = journalListTableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as? JournalListTableViewCell else {
+            
+            return JournalListTableViewCell()
+        }
+        
+         cell.journalImageView.image = UIImage(named: "iconPlus")
+         cell.journalTitleTextView.text = "AHAHAAHA"
+        
+        
+        return cell
+        
+        
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(rowHeight)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
