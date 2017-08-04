@@ -27,8 +27,7 @@ extension AddJournalViewController {
         // 建立[OK]按鈕
         let okAction = UIAlertAction(
             title: "確定",
-            style: .default) {
-                (_: UIAlertAction!) -> Void in
+            style: .default) { (_: UIAlertAction!) -> Void in
                 
                 if addNew == true {
                     let journal = Journal(context: self.addJournalManager)
@@ -100,8 +99,7 @@ extension AddJournalViewController {
         // 建立[OK]按鈕
         let okAction = UIAlertAction(
             title: "確定",
-            style: .default) {
-                (_: UIAlertAction!) -> Void in
+            style: .default) { (_: UIAlertAction!) -> Void in
                 
                 self.dismiss(animated: true, completion: nil)
         }
