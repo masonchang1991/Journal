@@ -9,14 +9,11 @@
 import UIKit
 import CoreData
 
-
 class AddJournalViewController: UIViewController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var pickImageView: UIImageView!
     
     @IBOutlet weak var defaultBackgroundView: UIView!
-
-
     
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var defaultImageView: UIImageView!
@@ -30,7 +27,6 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
     var addJournalManager: NSManagedObjectContext!
     
     var journals = [Journal]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +44,15 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
         pickImageView.addGestureRecognizer(tap)
         
         pickImageView.isUserInteractionEnabled = true
-       
         
         if addNew == true {
-
             
         } else {
+            
             loadData()
             titleTextView.text = journals[editCellIndexPath].title
             contentsTextView.text = journals[editCellIndexPath].content
             pickImageView.image = UIImage(data: journals[editCellIndexPath].image! as Data)
-
-            
             
         }
         
@@ -69,8 +62,6 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    
     
     func choosePhotoOrCamera() {
         
@@ -114,119 +105,13 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
             completion: nil)
         
     }
-    
-    
-    
-    @IBAction func saveToLocal(_ sender: UIButton) {
-        
-        
-        let alertController = UIAlertController(
-            title: "確定存擋？",
-            message: "",
-            preferredStyle: .alert)
-        
-        // 建立[取消]按鈕
-        let cancelAction = UIAlertAction(
-            title: "取消",
-            style: .cancel,
-            handler: nil)
-        alertController.addAction(cancelAction)
-        
-        // 建立[OK]按鈕
-        let okAction = UIAlertAction(
-            title: "確定",
-            style: .default) {
-                (_: UIAlertAction!) -> Void in
-                
-                if addNew == true {
-                    let journal = Journal(context: self.addJournalManager)
-                    guard let image = self.pickImageView.image else {
-                        return
-                    }
-                    guard  let imageNSData = UIImageJPEGRepresentation(image, 1) else {
-                        return
-                    }
-                    
-                    journal.content = self.contentsTextView.text
-                    journal.title = self.titleTextView.text
-                    journal.image = NSData(data: imageNSData)
-                    
-                    do {
-                        try self.addJournalManager.save()
-                        self.loadData()
-                    } catch {
-                        print("counld not save \(error)")
-                    }
 
-                    
-                } else {
-                    
-                    guard let image = self.pickImageView.image else {
-                        return
-                    }
-                    guard  let imageNSData = UIImageJPEGRepresentation(image, 1) else {
-                        return
-                    }
-                    
-                    self.journals[editCellIndexPath].content = self.contentsTextView.text
-                    self.journals[editCellIndexPath].title = self.titleTextView.text
-                    self.journals[editCellIndexPath].image = NSData(data: imageNSData)
-                    
-                    do {
-                        try self.addJournalManager.save()
-                        self.loadData()
-                    } catch {
-                        print("counld not save \(error)")
-                    }
-
-                    
-                    
-                }
-                
-                self.dismiss(animated: true, completion: nil)
-        }
-        
-        alertController.addAction(okAction)
-        self.present(
-            alertController,
-            animated: true,
-            completion: nil)
-        
-    }
-
-    @IBAction func close(_ sender: UIButton) {
-        
-        let alertController = UIAlertController(
-            title: "確定離開",
-            message: "離開文字與圖片將不會存取",
-            preferredStyle: .alert)
-        
-        // 建立[取消]按鈕
-        let cancelAction = UIAlertAction(
-            title: "取消",
-            style: .cancel,
-            handler: nil)
-        alertController.addAction(cancelAction)
-        
-        // 建立[OK]按鈕
-        let okAction = UIAlertAction(
-            title: "確定",
-            style: .default) {
-                (_: UIAlertAction!) -> Void in
-                
-                self.dismiss(animated: true, completion: nil)
-        }
-        
-        alertController.addAction(okAction)
-        self.present(
-            alertController,
-            animated: true,
-            completion: nil)
-
-        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    func loadData(){
+    func loadData() {
         
         let journalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
         do {
@@ -237,15 +122,4 @@ class AddJournalViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }
-
-
-
-

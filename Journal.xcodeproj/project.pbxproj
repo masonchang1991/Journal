@@ -21,6 +21,7 @@
 		93729AAE1F341E4A004125C0 /* AddJournalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */; };
 		93729AB81F34309D004125C0 /* JournalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */; };
 		93729ABA1F3432AB004125C0 /* CoreDataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AB91F3432AB004125C0 /* CoreDataFunction.swift */; };
+		93729ABE1F346B5B004125C0 /* ButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729ABD1F346B5B004125C0 /* ButtonFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalLayout.swift; sourceTree = "<group>"; };
 		93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalModel.xcdatamodel; sourceTree = "<group>"; };
 		93729AB91F3432AB004125C0 /* CoreDataFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFunction.swift; sourceTree = "<group>"; };
+		93729ABD1F346B5B004125C0 /* ButtonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				93729AA51F341703004125C0 /* AddJournalViewController.swift */,
+				93729ABD1F346B5B004125C0 /* ButtonFunction.swift */,
 				93729AAB1F341C03004125C0 /* GetPhotoFunction.swift */,
 				93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */,
 			);
@@ -220,6 +223,7 @@
 				93729A8D1F34027C004125C0 /* JournalListViewController.swift in Sources */,
 				93729ABA1F3432AB004125C0 /* CoreDataFunction.swift in Sources */,
 				93729AA61F341703004125C0 /* AddJournalViewController.swift in Sources */,
+				93729ABE1F346B5B004125C0 /* ButtonFunction.swift in Sources */,
 				93729AB81F34309D004125C0 /* JournalModel.xcdatamodeld in Sources */,
 				93729AA01F340C0F004125C0 /* JournalCellLayoutFunction.swift in Sources */,
 				93729AAE1F341E4A004125C0 /* AddJournalLayout.swift in Sources */,

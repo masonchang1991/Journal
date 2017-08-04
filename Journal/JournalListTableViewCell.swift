@@ -10,13 +10,11 @@ import UIKit
 
 class JournalListTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var journalImageView: UIImageView!
    
     @IBOutlet weak var journalContainerView: UIView!
 
     @IBOutlet weak var journalTitleLabel: UILabel!
-
     
     @IBOutlet weak var sperator: UIView!
     

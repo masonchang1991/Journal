@@ -18,14 +18,11 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var barRightButton: UIBarButtonItem!
     
-    
-    
     var rowHeight = 212
     
     var addJournalManager: NSManagedObjectContext!
     
     var journals = [Journal]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +30,15 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         let title = UILabel(frame: CGRect(x: 0, y: 0, width: 283, height: 24))
         title.text = "My Journals"
         title.textColor = UIColor.slate
+        title.font = UIFont.boldSystemFont(ofSize: 20)
         
         self.navigationItem.titleView = title
         self.navigationController?.navigationBar.backgroundColor = UIColor.white
         
         barRightButton.tintColor = UIColor.dustyOrange
-        
-        
        
         self.journalListTableView.delegate = self
         self.journalListTableView.dataSource = self
-        
-        
-        
         
     }
     
@@ -59,15 +52,12 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    
-    
-    
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        tableView.separatorStyle = .none
+        
         return journals.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -81,20 +71,15 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         editCellIndexPath = indexPath.row
         cell.journalImageView.addGestureRecognizer(tap)
         cell.journalImageView.isUserInteractionEnabled = true
-       
-        
         
         return journalCellLayout(cell, rowAt: indexPath)
     }
-    
-    
-
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(rowHeight)
     }
     
-    func goToEdit(sender: UITapGestureRecognizer){
+    func goToEdit(sender: UITapGestureRecognizer) {
         
         addNew = false
         
@@ -110,20 +95,11 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         
         editCellIndexPath = indexPathRow
         
-        
         self.performSegue(withIdentifier: "AddOrEditJournal", sender: self)
-        
-        
         
     }
     
-    
-    
-    
-    
-    
-    
-    func loadData(){
+    func loadData() {
         
         let journalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
         do {
@@ -134,8 +110,6 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    
-    
     @IBAction func rightBarButton(_ sender: Any) {
         
         addNew = true
@@ -145,19 +119,10 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         self.performSegue(withIdentifier: "AddOrEditJournal", sender: self)
         
     }
-    
-    
-    
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
 
-
 }
-

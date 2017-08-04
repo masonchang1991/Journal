@@ -10,8 +10,6 @@ import UIKit
 
 extension AddJournalViewController: UIImagePickerControllerDelegate {
     
-    
-    
     func getUserCamera() {
         
         let picker: UIImagePickerController = UIImagePickerController()
@@ -43,14 +41,7 @@ extension AddJournalViewController: UIImagePickerControllerDelegate {
             
         }
         
-        
     }
-    
-    
-    
-    
-    
-    
     
     func getUserPhoto() {
         let picker: UIImagePickerController = UIImagePickerController()
@@ -87,8 +78,5 @@ extension AddJournalViewController: UIImagePickerControllerDelegate {
         
         picker.dismiss(animated: true, completion: nil)
     }
-    
-
-    
     
 }

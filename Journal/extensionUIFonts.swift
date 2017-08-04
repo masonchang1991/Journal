@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension UILabel {
     func addCharactersSpacing( spacing: CGFloat, text: String ) {
         let attributedString = NSMutableAttributedString(string: text)
@@ -127,7 +126,6 @@ extension UIFont {
     }
 }
 
-
 extension UITextView: UITextViewDelegate {
     
     // Placeholder text
@@ -137,7 +135,7 @@ extension UITextView: UITextViewDelegate {
             // Get the placeholder text from the label
             var placeholderText: String?
             
-            if let placeHolderLabel = self.viewWithTag(100) as? UILabel {
+            if let placeHolderLabel = self.viewWithTag(200) as? UILabel {
                 placeholderText = placeHolderLabel.text
             }
             return placeholderText
@@ -145,12 +143,11 @@ extension UITextView: UITextViewDelegate {
         
         set {
             // Store the placeholder text in the label
-            var placeHolderLabel = self.viewWithTag(100) as? UILabel
+            var placeHolderLabel = self.viewWithTag(200) as? UILabel
             if placeHolderLabel == nil {
                 // Add placeholder label to text view
                 self.addPlaceholderLabel(placeholderText: newValue!)
-            }
-            else {
+            } else {
                 placeHolderLabel?.text = newValue
                 placeHolderLabel?.sizeToFit()
             }
@@ -161,13 +158,12 @@ extension UITextView: UITextViewDelegate {
     // in the text viewotherwise, show the label
     public func textViewDidChange(textView: UITextView) {
         
-        var placeHolderLabel = self.viewWithTag(100)
+        var placeHolderLabel = self.viewWithTag(200)
         
         if !self.hasText {
             // Get the placeholder label
             placeHolderLabel?.isHidden = false
-        }
-        else {
+        } else {
             placeHolderLabel?.isHidden = true
         }
     }
@@ -183,13 +179,13 @@ extension UITextView: UITextViewDelegate {
         placeholderLabel.frame.origin.y = 5.0
         placeholderLabel.font = self.font
         placeholderLabel.textColor = UIColor.lightGray
-        placeholderLabel.tag = 100
+        placeholderLabel.tag = 200
         
         // Hide the label if there is text in the text view
         placeholderLabel.isHidden = ((self.text.characters.count) > 0)
         
         self.addSubview(placeholderLabel)
-        self.delegate = self;
+        self.delegate = self
     }
     
 }

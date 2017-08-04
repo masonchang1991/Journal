@@ -44,7 +44,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faD-qs-G0T">
-                                                    <rect key="frame" x="30" y="193" width="315" height="0.5"/>
+                                                    <rect key="frame" x="30" y="205" width="315" height="0.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="bHH-tq-Rww"/>
@@ -52,7 +52,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-MG-DOc">
-                                                    <rect key="frame" x="183" y="189" width="8" height="8"/>
+                                                    <rect key="frame" x="183" y="201" width="8" height="8"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="8" id="5N0-u9-Sqd"/>
@@ -81,8 +81,8 @@
                                                 <constraint firstItem="hrG-WQ-qjn" firstAttribute="top" secondItem="dmN-JS-RW5" secondAttribute="bottom" constant="16" id="KOx-uP-kzu"/>
                                                 <constraint firstItem="dmN-JS-RW5" firstAttribute="top" secondItem="Vx4-WP-Uey" secondAttribute="topMargin" constant="10" id="L29-uS-o7D"/>
                                                 <constraint firstItem="faD-qs-G0T" firstAttribute="centerX" secondItem="Vx4-WP-Uey" secondAttribute="centerX" id="P9m-Ff-ICP"/>
+                                                <constraint firstItem="faD-qs-G0T" firstAttribute="top" secondItem="hrG-WQ-qjn" secondAttribute="bottom" constant="15" id="UIK-zy-bI8"/>
                                                 <constraint firstItem="dmN-JS-RW5" firstAttribute="centerX" secondItem="Vx4-WP-Uey" secondAttribute="centerX" id="VZo-Kc-ujk"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="faD-qs-G0T" secondAttribute="bottom" constant="9.8000000000000007" id="bu4-u9-y1y"/>
                                                 <constraint firstItem="HQY-MG-DOc" firstAttribute="centerX" secondItem="faD-qs-G0T" secondAttribute="centerX" id="ilk-oI-d1x"/>
                                                 <constraint firstItem="hrG-WQ-qjn" firstAttribute="centerX" secondItem="Vx4-WP-Uey" secondAttribute="centerX" id="k7Y-Ii-yM8"/>
                                                 <constraint firstItem="HQY-MG-DOc" firstAttribute="centerY" secondItem="faD-qs-G0T" secondAttribute="centerY" id="nAR-8m-6Sh"/>
@@ -161,13 +161,14 @@
                                     <constraint firstAttribute="width" constant="160" id="5OI-wy-oiA"/>
                                     <constraint firstAttribute="height" constant="44" id="Ybv-aC-PCW"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="saveToLocal:" destination="7aN-Ws-T4Z" eventType="touchUpInside" id="zuI-9g-3I1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Zx-Vaj">
-                                <rect key="frame" x="22" y="381" width="331" height="36"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Zx-Vaj">
+                                <rect key="frame" x="22" y="381" width="331" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="331" id="3Yu-cr-MId"/>
