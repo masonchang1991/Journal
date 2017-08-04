@@ -10,6 +10,48 @@ import UIKit
 
 extension AddJournalViewController: UIImagePickerControllerDelegate {
     
+    
+    
+    func getUserCamera() {
+        
+        let picker: UIImagePickerController = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            picker.sourceType = UIImagePickerControllerSourceType.camera
+            picker.allowsEditing = true // 可對照片作編輯
+            picker.delegate = self
+            self.present(picker, animated: true, completion: nil)
+        } else {
+            print("沒有相機鏡頭...") // 用alertView.show
+            
+            // 建立一個提示框
+            let alertController = UIAlertController(
+                title: "很抱歉",
+                message: "您的相機是空號請裝了再按",
+                preferredStyle: .alert)
+
+            // 建立[ok]按鈕
+            let okAction = UIAlertAction(
+                title: "ok",
+                style: .default,
+                handler: nil)
+            alertController.addAction(okAction)
+            self.present(
+                alertController,
+                animated: true,
+                completion: nil)
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     func getUserPhoto() {
         let picker: UIImagePickerController = UIImagePickerController()
         

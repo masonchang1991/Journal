@@ -14,15 +14,17 @@ extension JournalListViewController {
     func journalCellLayout(_ journalCell: JournalListTableViewCell, rowAt indexPath: IndexPath) -> UITableViewCell {
 
         
-        journalCell.journalImageView.image = UIImage(named: "iconPlus")
+        journalCell.journalImageView.image = UIImage(data: journals[indexPath.row].image! as Data)
+        journalCell.journalImageView.clipsToBounds = true
         journalCell.journalImageView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        journalCell.journalImageView.layer.shadowPath = UIBezierPath(rect: journalCell.journalImageView.bounds).cgPath
         journalCell.journalImageView.layer.shadowRadius = 10
         journalCell.journalImageView.layer.shadowColor = UIColor.coolGrey.cgColor
         journalCell.journalImageView.layer.cornerRadius = 8
+       
         
-        
-        journalCell.journalTitleTextView.text = "AHAHAAHA"
-
+        journalCell.journalTitleLabel.text = journals[indexPath.row].title
+        journalCell.journalTitleLabel.textColor = UIColor.slate
 
         
         

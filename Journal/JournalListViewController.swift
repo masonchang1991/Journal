@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class JournalListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var journalListTableView: UITableView!
@@ -16,6 +16,10 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     var rowHeight = 212
+    
+    var addJournalManager: NSManagedObjectContext!
+    
+    var journals = [Journal]()
     
     
     override func viewDidLoad() {
@@ -29,6 +33,16 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //swiftlint:disable force_cast
+        addJournalManager = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //swiftlint:enable force_cast
+        loadData()
+        
+        
         
         
         
@@ -36,8 +50,12 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return journals.count
     }
     
     
@@ -75,7 +93,16 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     
-    
+    func loadData(){
+        
+        let journalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
+        do {
+            journals = try addJournalManager.fetch(journalRequest)
+        } catch {
+            print("Could not load data from database \(error.localizedDescription)")
+        }
+        
+    }
     
     
     

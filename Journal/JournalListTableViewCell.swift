@@ -12,6 +12,7 @@ class JournalListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var journalImageView: UIImageView!
    
-    @IBOutlet weak var journalTitleTextView: UITextView!
+
+    @IBOutlet weak var journalTitleLabel: UILabel!
 
 }

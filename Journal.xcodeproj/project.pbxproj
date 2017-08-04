@@ -19,6 +19,8 @@
 		93729AA91F3417C1004125C0 /* extensionUIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AA81F3417C1004125C0 /* extensionUIFonts.swift */; };
 		93729AAC1F341C03004125C0 /* GetPhotoFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AAB1F341C03004125C0 /* GetPhotoFunction.swift */; };
 		93729AAE1F341E4A004125C0 /* AddJournalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */; };
+		93729AB81F34309D004125C0 /* JournalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */; };
+		93729ABA1F3432AB004125C0 /* CoreDataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93729AB91F3432AB004125C0 /* CoreDataFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		93729AA81F3417C1004125C0 /* extensionUIFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionUIFonts.swift; sourceTree = "<group>"; };
 		93729AAB1F341C03004125C0 /* GetPhotoFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPhotoFunction.swift; path = ../GetPhotoFunction.swift; sourceTree = "<group>"; };
 		93729AAD1F341E4A004125C0 /* AddJournalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJournalLayout.swift; sourceTree = "<group>"; };
+		93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalModel.xcdatamodel; sourceTree = "<group>"; };
+		93729AB91F3432AB004125C0 /* CoreDataFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			children = (
 				93729A8A1F34027C004125C0 /* AppDelegate.swift */,
 				93729A8E1F34027C004125C0 /* Main.storyboard */,
+				93729AB91F3432AB004125C0 /* CoreDataFunction.swift */,
 				93729AAA1F341BE7004125C0 /* AddJournalView */,
 				93729AA11F3410FF004125C0 /* JournalListView */,
 				93729A911F34027C004125C0 /* Assets.xcassets */,
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				93729AA31F3411AD004125C0 /* extensionUIColors.swift */,
+				93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */,
 			);
 			name = Colors;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 				93729AAC1F341C03004125C0 /* GetPhotoFunction.swift in Sources */,
 				93729AA91F3417C1004125C0 /* extensionUIFonts.swift in Sources */,
 				93729A8D1F34027C004125C0 /* JournalListViewController.swift in Sources */,
+				93729ABA1F3432AB004125C0 /* CoreDataFunction.swift in Sources */,
 				93729AA61F341703004125C0 /* AddJournalViewController.swift in Sources */,
+				93729AB81F34309D004125C0 /* JournalModel.xcdatamodeld in Sources */,
 				93729AA01F340C0F004125C0 /* JournalCellLayoutFunction.swift in Sources */,
 				93729AAE1F341E4A004125C0 /* AddJournalLayout.swift in Sources */,
 				93729A9E1F34086F004125C0 /* JournalListTableViewCell.swift in Sources */,
@@ -383,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93729AB61F34309D004125C0 /* JournalModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */,
+			);
+			currentVersion = 93729AB71F34309D004125C0 /* JournalModel.xcdatamodel */;
+			path = JournalModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 93729A7F1F34027C004125C0 /* Project object */;
 }
