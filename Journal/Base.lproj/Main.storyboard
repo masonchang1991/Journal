@@ -45,7 +45,7 @@
                                                         <constraint firstAttribute="height" constant="16" id="Om1-jR-7Mn"/>
                                                         <constraint firstAttribute="width" constant="315" id="tp4-OH-1Nd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -77,12 +77,13 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Czl-Hp-JqF">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="7aN-Ws-T4Z" kind="presentation" id="PZP-3L-M2Q"/>
+                                <action selector="rightBarButton:" destination="BYZ-38-t0r" id="7jo-bv-rg9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="journalListTableView" destination="erR-uk-Iec" id="hQ5-NN-pmc"/>
+                        <segue destination="7aN-Ws-T4Z" kind="presentation" identifier="AddOrEditJournal" id="EW4-Cc-Gg1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,15 +124,14 @@
                                     <constraint firstAttribute="width" constant="331" id="u1i-kX-Kxa"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kGL-LT-xef">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGL-LT-xef">
                                 <rect key="frame" x="22" y="441" width="331" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="71V-Cc-owz"/>
                                     <constraint firstAttribute="width" constant="331" id="Jjz-8c-KEM"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gN-4R-BYT">
@@ -145,14 +145,14 @@
                                     <action selector="saveToLocal:" destination="7aN-Ws-T4Z" eventType="touchUpInside" id="zuI-9g-3I1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Zx-Vaj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Zx-Vaj">
                                 <rect key="frame" x="22" y="385" width="331" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="331" id="3Yu-cr-MId"/>
                                     <constraint firstAttribute="height" constant="36" id="DqQ-5U-UB3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

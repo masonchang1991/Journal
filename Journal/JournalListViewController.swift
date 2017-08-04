@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+
+var addNew = false
+var editCellIndexPath = -1
+
 class JournalListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var journalListTableView: UITableView!
@@ -41,11 +45,7 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         addJournalManager = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         //swiftlint:enable force_cast
         loadData()
-        
-        
-        
-        
-        
+        self.journalListTableView.reloadData()
         
     }
     
@@ -65,17 +65,16 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
             
             return JournalListTableViewCell()
         }
-        
+        cell.selectionStyle = .none
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToEdit))
+        editCellIndexPath = indexPath.row
+        cell.journalImageView.addGestureRecognizer(tap)
+        cell.journalImageView.isUserInteractionEnabled = true
        
         
         
-        
-        
-        
         return journalCellLayout(cell, rowAt: indexPath)
-        
-        
-        
     }
     
     
@@ -85,7 +84,28 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
         return CGFloat(rowHeight)
     }
     
-    
+    func goToEdit(sender: UITapGestureRecognizer){
+        
+        addNew = false
+        
+        let taplocation = sender.location(in: self.journalListTableView)
+        
+        let indexPath = self.journalListTableView.indexPathForRow(at: taplocation)
+        
+        print(indexPath)
+        
+        guard let indexPathRow = indexPath?.row else {
+            return
+        }
+        
+        editCellIndexPath = indexPathRow
+        
+        
+        self.performSegue(withIdentifier: "AddOrEditJournal", sender: self)
+        
+        
+        
+    }
     
     
     
@@ -106,6 +126,15 @@ class JournalListViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     
+    @IBAction func rightBarButton(_ sender: Any) {
+        
+        addNew = true
+        
+        print(editCellIndexPath)
+        
+        self.performSegue(withIdentifier: "AddOrEditJournal", sender: self)
+        
+    }
     
     
     

@@ -13,7 +13,13 @@ extension AddJournalViewController {
     
     func addLayout(titleTextView: UITextView, contentsTextView: UITextView, saveButton: UIButton, closeButton: UIButton) {
         
-        titleTextView.text = "Title"
+        if titleTextView.text == "" {
+            
+            titleTextView.text = "Title"
+        } else {
+            
+            
+        }
         titleTextView.textColor = UIColor.slate
         
         
@@ -22,7 +28,11 @@ extension AddJournalViewController {
 
         
         saveButton.backgroundColor = UIColor.dustyOrange
+        if addNew == true {
         saveButton.setTitle("Save", for: .normal)
+        } else {
+            saveButton.setTitle("change", for: .normal)
+        }
         saveButton.setTitleColor(UIColor.white, for: .normal)
         saveButton.layer.cornerRadius = 22
         
